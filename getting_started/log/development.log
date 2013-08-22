@@ -1986,3 +1986,156 @@ Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-08-22 16:14:41 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-22 16:14:41 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-22 17:42:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (375.0ms)
+Completed 500 Internal Server Error in 672ms
+
+ActionView::Template::Error (No route matches {:controller=>"posts", :action=>"index"}):
+    1: <h1>Hello, Rails!</h1>
+    2: 
+    3: <%= link_to "My Blog", controller: "posts" %>
+  app/views/welcome/index.html.erb:3:in `_app_views_welcome_index_html_erb___633488508_16650144'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (46.9ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (140.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-08-22 17:42:48 -0500
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_articles_index_html_erb__564121802_16154964 at F:/Github/Rails-projects/getting_started/app/views/articles/index.html.erb:18)
+  Rendered articles/index.html.erb within layouts/application (218.8ms)
+Completed 200 OK in 1109ms (Views: 1062.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:49 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-22 17:42:50 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-22 17:45:48 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-22 17:45:49 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-22 17:46:12 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 63ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-22 17:49:03 -0500
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x10b9438@C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-22 17:49:10 -0500
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x10b9438@C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-22 17:49:11 -0500
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x10b9438@C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-22 17:49:11 -0500
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x10b9438@C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-22 17:52:16 -0500
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x10b9438@C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)

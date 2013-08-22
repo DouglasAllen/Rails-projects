@@ -1,0 +1,15 @@
+Thu, 22 Aug 2013 17:56:23 -0500
+README.rdoc	Thu, 22 Aug 2013 12:32:26 -0500
+app/controllers/application_controller.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/controllers/articles_controller.rb	Thu, 22 Aug 2013 15:55:41 -0500
+app/controllers/comments_controller.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/controllers/main_controller.rb	Thu, 22 Aug 2013 15:13:25 -0500
+app/controllers/posts_controller.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/controllers/welcome_controller.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/helpers/application_helper.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/helpers/comments_helper.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/helpers/posts_helper.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/helpers/welcome_helper.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/models/article.rb	Thu, 22 Aug 2013 15:59:03 -0500
+app/models/comment.rb	Thu, 22 Aug 2013 12:32:26 -0500
+app/models/post.rb	Thu, 22 Aug 2013 12:32:26 -0500

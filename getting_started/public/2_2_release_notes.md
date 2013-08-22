@@ -31,20 +31,48 @@ Documentation
 
 The internal documentation of Rails, in the form of code comments, has been improved in numerous places. In addition, the [Ruby on Rails Guides](http://guides.rubyonrails.org/) project is the definitive source for information on major Rails components. In its first official release, the Guides page includes:
 
-* [Getting Started with Rails](getting_started.html)
-* [Rails Database Migrations](migrations.html)
-* [Active Record Associations](association_basics.html)
-* [Active Record Query Interface](active_record_querying.html)
-* [Layouts and Rendering in Rails](layouts_and_rendering.html)
-* [Action View Form Helpers](form_helpers.html)
-* [Rails Routing from the Outside In](routing.html)
-* [Action Controller Overview](action_controller_overview.html)
-* [Rails Caching](caching_with_rails.html)
-* [A Guide to Testing Rails Applications](testing.html)
-* [Securing Rails Applications](security.html)
-* [Debugging Rails Applications](debugging_rails_applications.html)
+* [Getting Started with Rails](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/getting_started.md)
+
+-
+
+* [Action Controller Overview](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/action_controller_overview.md)
+* [Action Mailer Basics](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/action_mailer_basics.md)
+* [Action View Overview](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/action_view_overview.md)
+* [Action View Form Helpers](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/form_helpers.md)
+* [Active Model Basics](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_model_basics.md)
+* [Active Record Basics](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_record_basics.md)
+* [Active Record Associations](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/association_basics.md)
+* [Active Record Callbacks](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_record_callbacks.md)
+* [Active Record Migrations](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/migrations.md)
+* [Active Record Query Interface](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_record_querying.md)
+* [Active Record Validations](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_record_validations.md)
+* [Active Support Core Extensions](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_support_core_extensions.md)
+* [Active Support Instrumentation](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/active_support_instrumentation.md)
+* [Asset Pipeline](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/asset_pipeline.md)
+* [Caching with Rails: An overview](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/caching_with_rails.md)
+* [Command Line](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/command_line.md)
+* [Configuring Rails Applications](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/configuring.md)
+* [Contributing to Ruby on Rails](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/contributing_to_ruby_on_rails.md)
+* [Creating and Customizing Rails Generators & Templates](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/generators.md)
+* [Debugging Rails Applications](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/debugging_rails_applications.md)
+* [Development Dependencies Install](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/development_dependencies_install.md)
+* [Getting Started with Engines](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/engines.md)
+* [Working with JavaScript in Rails](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/working_with_javascript_in_rails.md)
+* [Layouts and Rendering in Rails](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/layouts_and_rendering.md)
 * [Performance Testing Rails Applications](performance_testing.html)
-* [The Basics of Creating Rails Plugins](plugins.html)
+* [Rails Application Templates](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/rails_application_templates.md)
+* [Rails Internationalization (I18n) API](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/i18n.md)
+* [Rails nested model forms](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/nested_model_forms.md)
+* [The Basics of Creating Rails Plugins](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/plugins.md)
+* [Rails on Rack](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/rails_on_rack.md)
+* [Rails Routing from the Outside In](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/routing.md)
+* [Ruby on Rails Guides Guidelines](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/ruby_on_rails_guides_guidelines.md)
+* [Ruby on Rails Security Guide](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/security.md)
+* [A Guide to Testing Rails Applications](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/testing.md)
+* [A Guide for Upgrading Ruby on Rails](https://github.com/DouglasAllen/Rails-projects/blob/master/getting_started/public/upgrading_ruby_on_rails.md)
+
+
+
 
 All told, the Guides provide tens of thousands of words of guidance for beginning and intermediate Rails developers.
 

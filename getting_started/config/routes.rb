@@ -1,7 +1,7 @@
 Blog::Application.routes.draw do
-  #~ resources :posts do
-    #~ resources :comments
-  #~ end
+  resources :posts do
+    resources :comments
+  end
   resources :products
   resources :articles do
     post :article
