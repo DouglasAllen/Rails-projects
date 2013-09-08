@@ -1,0 +1,63 @@
+body, td, input, select, textarea
+{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+#header {
+    margin: 10px 40px;
+    background-color: #00cccc;
+    font-family: sans-serif;   
+    border-top: 4px solid #2A1959;
+    border-left: 4px solid #2A1959;
+    border-right: 4px solid #2A1959;
+    border-bottom: 4px solid #2A1959;
+}
+
+#breadcrumbs {
+    margin: 10px 40px;
+    background-color: #00cccc;
+    font-family: sans-serif;   
+    border-top: 4px solid #2A1959;
+    border-left: 4px solid #2A1959;
+    border-right: 4px solid #2A1959;
+    border-bottom: 4px solid #2A1959;
+}
+body {
+    margin: 15px 44px;
+    background-color: #00cccc;
+    font-family: sans-serif;    
+}
+
+#content {
+    margin: 15px 44px;
+    background-color: #00cccc;
+    font-family: sans-serif;   
+}
+
+h1 { font-size: 320%; }
+h2 { font-size: 240%; }
+h3 { font-size: 180%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+}
+
+h2 {
+  color: #000000;
+  font-size: 1.2em;
+}
+h2, p {
+    color: #000000;
+    margin-left: 120px;
+}
+
+a, a:visited, a:active, a:hover
+{
+	color: #3333cc;
+	text-decoration: underline;
+}

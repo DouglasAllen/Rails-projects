@@ -1,0 +1,188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-loose.dtd"> 
+<html> 
+    <head>
+        <meta content="utf-8"> 
+        <title>About me</title>
+        <STYLE type="text/css">
+        #myid {color: black; text-align: center}
+        </STYLE> 
+        <link rel="stylesheet" href="public/stylesheets/aboutme.css"> 
+        <script type="text/javascript"> 
+            function showtime()
+            {
+                var message="<p><a href='http://qrz.com/db/kb9agt'>See QRZ post.</a></p>";
+                var message1="<p><a href='http://douglasallen.github.com/about_me/'>Click here to view image again!</a></p>";
+                document.getElementById("imageclick").innerHTML=Date()+ message  + message1;
+            }
+            function showtext()
+            {
+                var message="<p><a href='http://douglasallen.github.com/about_me/public/Battery_Charging.txt'>Battery Charging in three steps.</a></p>";
+                var message1="<p><a href='http://douglasallen.github.com/about_me/'>Click here to view image!</a></p>";
+                document.getElementById("imageclick2").innerHTML=Date()+ message + message1;
+            }
+            function showw9s()
+            {
+                var message="<p><a href='http://www.w9icu.com/w9s.html'>This image is from W9S </a></p>";
+                var message1="<p><a href='http://douglasallen.github.com/about_me/'>Click here to view image!</a></p>";
+                var message2="<p><a href='http://douglasallen.github.com/about_me/public/beginners.html'>HF SSB & Computers</a></p>";
+                document.getElementById("imageclick3").innerHTML=Date()+ message + message1 + message2;
+            }
+        </script> 
+    </head>
+    <div id="header">
+      <h1 align="center">Welcome aboard!</h1>
+      <h1 align="center">You&rsquo;re riding Ruby on Rails!</h1>
+    </div>
+    <body>        
+        <div id="breadcrumbs"
+          style="background-color: grey;
+          color: #ffffff;
+          font-size: 14pt;
+          padding-left: 3%">
+          <a id="myid" href="http://adg-pftwwr-41-9-1.herokuapp.com/static_pages/index.html">
+          My static pages</a>
+           &nbsp;|&nbsp;
+          <a id="myid" href="http://adg-pftwwr-41-9-1.herokuapp.com/solar/index.html">
+          EoT demo</a>
+           &nbsp;|&nbsp;
+          <a id="myid" href="http://adg-pftwwr-41-9-1.herokuapp.com/time/julian.html">
+          AJD</a>        
+        </div>
+            <div id="content">
+            <table>
+                <tr>
+                    <th align="center">
+                        <h2 id="g0.1">me</h2>
+                    </th>
+                    <th align="center">
+                        <h2 id="g0.2">About</h2>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="imageclick">
+                            <img src="public/images/2009-12-28 19.49.45.jpg" alt="Douglas George Allen" width="220" height="280" onclick="showtime()">
+                        </div>
+                    </td>
+                    <td>
+                        <h2 id="g0.3">Hello! My name is Douglas and I 'm a <a href="http://mormon.org">mormon</a>.</h2>
+                    </td>
+                </tr>            
+            </table>
+            <table>
+                <tr>
+                    <td>
+                      <div id="imageclick2">
+                        <img src="public/images/189891_4587267214_4624_n.jpg" alt="Douglas George Allen" width="220" height="190" onclick="showtext()">
+                      </div>
+                    </td>
+                    <td>
+                        <h2 id="g0.4">I live in the United States of America.</h2>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                      <div id="imageclick3">
+                        <img src="public/images/kb9agt.jpg" alt="Douglas George Allen" width="220" height="190" onclick="showw9s()">
+                      </div>
+                    </td>
+                    <td>
+                        <h2 id="g0.5">My station call is KB9AGT.</h2>
+                        <h2 id="g0.6">I hold an Extra-Class Amateur Radio Operator and my QTH is De Kalb Illinois.</h2>
+                        <p>Click on any of the images for more about me.</p>
+                    </td>
+                </tr>
+            </table>
+        </div> 
+        <hr> 
+
+        <p>Learning Ruby and JRuby is a fun experience in building applications for desktop and the web.</p>
+        <p>I completed beginner online Java course for basic concepts of OOP. </p> 
+        <p>Then I completed J2EE course on Java web apps. We used Glassfish server often. Tomcat is fun too.</p> 
+        <p>I also want to enhance the skills that I picked up in those courses while learning Ruby and Rails.</p> 
+        <p>My facebook page is <a href="http://www.facebook.com/KB9AGT">www.facebook.com/KB9AGT</a></p> 
+        <p>My github repos are <a href="https://github.com/DouglasAllen">https://github.com/DouglasAllen</a></p> 
+        <p>I have a gist that is my favorite <a href="https://gist.github.com/2032003">https://gist.github.com/2032003</a></p> 
+        <p>I have a Heroku page that is my favorite <a href="http://equationoftime.herokuapp.com/">http://equationoftime.herokuapp.com/</a></p> 
+        <p>I have a Gem that is used in Equation of Time pages named equation_of_time.gem(gem install equation_of_time).</p>
+        <p>I have a Github page that shows all my Heroku apps <a href="http://douglasallen.github.com/Github_page/">http://douglasallen.github.com/Github_page/</a></p> 
+
+        <hr> 
+        <p>Don't worry if you don't have the java plugin for the clock. You don't need it.</p>
+        <p>But you fellow HAMs know to set your system clock to UTC and you'll get the same here.</p>
+        <p>Don't worry about the flash player plugin either. It's just sort of a test for me as this is my home page.</p> 
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <applet height="408" width="400" codebase="public" code="Clock1.class">
+                            <param name="bgcolor" value="eeeeee">
+                            <param name="fgcolor1" value="000000">
+                            <param name="fgcolor2" value="ff0000">
+                            alt="Your browser understands the &amp;ltAPPLET&gt; tag but isn't running
+                            the applet, for some reason."    Your browser is completely ignoring the
+                            &amp;ltAPPLET&gt; tag!
+                        </applet>
+                    </td>
+                    <td>
+                        <div>
+                            <table width=320 border=0>
+                                <tr>
+                                    <td>
+                                        <center>
+<object width="400" height="355"><param name="movie" value="http://www.youtube.com/v/CQVFpfVSUUU&hl=en_US&feature=player_embedded&version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.youtube.com/v/CQVFpfVSUUU&hl=en_US&feature=player_embedded&version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="400" height="355"></embed></object>
+                                            
+                                            
+                                        </center>
+                                        <table align=center width=320 height=30 bgcolor=#FCE69A>
+                                            <tr>
+                                                <td height=3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table width=100%>
+                                                        <tr>
+                                                            <td width=210 style="border: 0pt none ; margin: 0pt; padding: 3pt; font-family: Arial,Helvetica,sans-serif; font-size: 11px; vertical-align: midle; text-align: center;">
+                                                                <font>  Found at <a href="http://beemp3.com/download.php?file=6413715&song=">Beemp3.com</a>
+                                                                </font>
+                                                            </td>
+                                                            <td width=100>
+                                                                <img src="http://pl.beemp3.com/player/logo_small.gif">
+                                                            </td>
+                                                            <td width=10>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height=3>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr> 
+        <a href="http://douglasallen.github.com/about_me/irb-applet.html">Try JRuby IRB here</a>
+        <p>Try this when you get there.</p>
+        <p>loop do<br />
+             puts Time.now<br />
+             sleep 1<br />
+           end<br />
+        </p>
+        <hr> 
+        <p><a href="http://twitter.com/KB9AGT"> <img src="http://rubylearning.com/images/twitter-ani.gif"  style="border: 0px none ;" alt="Twitter Id" title="Follow me on Twitter to communicate and stay connected" /></a></p>
+       
+    </body>
+</html> 

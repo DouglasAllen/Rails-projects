@@ -1,0 +1,15 @@
+<% provide(:title, 'AJD+Time') %>
+<h1>Time#julian</h1>
+<p>Find me in app/views/time/julian.html.erb</p>
+<p>
+  <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @today.to_s %>"> : date now UTC.
+</p>
+<p>
+  <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @tstring %>"> : time now UTC.
+</p>
+<p>
+  <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @ajd.to_s %>"> is astronomical julian day number and time now.
+</p>
+<p>
+  <%= link_to "   Check it at http://www.celnav.de/longterm.htm", 'http://www.celnav.de/longterm.htm' %>
+</p>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <b> <title>Posts: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css' %>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/2.5.2/build/base/base-min.css' %>
+  </b>
+</head>
+<body>
+	<div id="content">
+	<h1>Awesome Blog!</h1>
+	<hr />
+	<%= yield %>
+	</div>
+</body>
+</html>

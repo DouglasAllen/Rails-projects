@@ -1,0 +1,6 @@
+      invoke  mongo_mapper
+      create    app/models/posts.rb
+      invoke    test_unit
+   identical      test/unit/posts_test.rb
+    conflict      test/fixtures/posts.yml
+    Overwrite C:/Samples/app_w_mongo/test/fixtures/posts.yml? (enter "h" for help) [Ynaqdh] Terminate batch job (Y/N)? Terminate batch job (Y/N)? 

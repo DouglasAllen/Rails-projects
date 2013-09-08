@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<HTML> 
+  <HEAD>
+    <script type="text/javascript">
+	
+    </script>
+  </HEAD>
+  <body>
+    <b>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @ajd.to_s %>"> is astronomical julian day number and time now.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @mean_anomaly.to_s %>"> is the mean anomaly of the sun in degrees decimal.<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @mean_anomaly_str %>"> is the mean anomaly of the sun in degrees:minutes:seconds.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @true_anomaly.to_s %>"> is the true anomaly of the sun in degrees decimal.<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @true_anomaly_str %>"> is the true anomaly of the sun in  degrees:minutes:seconds.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= (@mean_anomaly - @true_anomaly).to_s %>"> is the difference in mean anomaly and true anomaly.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= (4.0 * 23.93447/24.0).to_s %>"> is minutes per degree siderial time and multiplying we get<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= ((@mean_anomaly - @true_anomaly) * (4.0 * 23.93447/24.0)).to_s %>"> minutes or<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @e1string %>"></p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @lambda.to_s %>"> is the ecliptic longitude of the sun in degrees decimal.<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @lambdastring %>"> is the ecliptic longitude of the sun in degrees:minutes:seconds.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @ra.to_s %>"> is the right ascention of the sun in degrees decimal.<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @radstring %>"> is the right ascention of the sun in degrees:minutes:seconds.<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @ratstring %>"> is the right ascention of the sun in hours:minutes:seconds
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= (@lambda - @ra).to_s  %>"> is the difference in ecliptic longitude and right ascention.
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= (4.0 * 23.93447/24.0).to_s %>"> is minutes per degree siderial time and multiplying we get<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= ((@lambda - @ra) * (4.0 * 23.93447/24.0)).to_s %>"> minutes or<br />
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @e2string %>">
+      </p>
+      <p>
+        <input style="font-weight: bold" value="&nbsp;&nbsp;<%= @totlastring %>"> is total Equation of time.
+      </p>
+      <p style="background-color: orange">
+        <%= link_to "   Check it", 'http://www.celnav.de/longterm.htm' %> as <%= @tstring %>
+      </p>
+    </b>
+
+  </body>
+</HTML>
