@@ -1,0 +1,24 @@
+<% form_for @pizza do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :crust_type_id %><br />
+    <%= f.collection_select :crust_type_id, CrustType.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.check_box :crispy %>
+    <%= f.label :crispy, "Extra Crispy" %>
+  </p>
+  <h3>Toppings</h3>
+  <% for topping in Topping.all %>
+    <p>
+      <%= check_box_tag 'pizza[topping_ids][]', topping.id, @pizza.toppings.include?(topping) %>
+      <%=h topping.name %>
+    </p>
+  <% end %>
+  <%= hidden_field_tag 'pizza[topping_ids][]', '' %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

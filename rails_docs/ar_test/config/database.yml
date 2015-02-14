@@ -1,0 +1,11 @@
+default: &default
+   adapter:  sqlite3
+   encoding: unicode
+
+development:
+  <<: *default
+  database: db/development.sqlite3 
+#  username: admin
+#  password: zaqwsx
+#  server:   localhost
+ 

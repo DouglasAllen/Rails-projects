@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'protected_attributes'
-#gem 'attr_accessible'
+gem 'attr_accessible'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+gem 'humdrum'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
@@ -13,7 +13,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.0.3'
@@ -32,13 +32,13 @@ end
 gem 'jbuilder', '~> 1.2'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

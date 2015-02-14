@@ -1,0 +1,16 @@
+// this is code is done using Haml 
+
+- if notice
+	%p#notice= notice
+
+%h1= t('.title_html')
+
+- @products.each do |p|
+	%content.entry
+		= image_tag(p.image_url)
+		%h3= p.title
+		= sanitize(p.description)
+
+		.price_line
+			%span.price= number_to_currency(p.price)
+			= button_to t('.add_html'), line_items_url(:product_id => p), :remote => true

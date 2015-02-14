@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="main1">
+      <div id="main2">
+        <div id="header">
+          <ul id="navigation">
+            <li><a href="/">WELCOME</a></li>
+            <li><a href="/house_pizzas">HOUSE PIZZAS</a></li>
+            <li><a href="/my_pizzas">MY PIZZAS</a></li>
+            <li><a href="/pizzas">SEARCH</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+    
+        <div id="container">
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+      
+          <%- if show_title? -%>
+            <h1><%=h yield(:title) %></h1>
+          <%- end -%>
+      
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <ul id="subnav">
+        <li><a href="/">Welcome</a></li>
+        <li><a href="/house_pizzas">House Pizzas</a></li>
+        <li><a href="/pizzas">Search</a></li>
+        <% if logged_in? %>
+          <li><a href="/my_pizzas">My Pizzas</a></li>
+          <li><a href="/logout">Logout</a></li>
+        <% else %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+        <% end %>
+      </ul>
+      <div id="copyright">
+        &copy; 2008 Placeholder
+      </div>
+    </div>
+  </body>
+</html>

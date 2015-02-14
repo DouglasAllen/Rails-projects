@@ -1,0 +1,15 @@
+<div class="pizza">
+  <h2><%= link_to h(pizza.name), pizza %></h2>
+  <div class="description">
+    <%=h pizza.description %>
+    <% if logged_in? && current_user.owns?(pizza) %>
+      <span class="user_actions">
+      <%= link_to "Edit", edit_pizza_path(pizza) %> |
+      <%= link_to "Destroy", pizza, :method => 'delete', :confirm => "Are you sure?" %>
+      </span>
+    <% end %>
+  </div>
+  <div class="order">
+    <%= link_to image_tag('order_pizza.gif', :size => '88x18') %>
+  </div>
+</div>

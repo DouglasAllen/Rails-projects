@@ -1,0 +1,20 @@
+<% title "Pizza" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @pizza.name %>
+</p>
+<p>
+  <strong>Crust:</strong>
+  <%=h @pizza.crust_type.name if @pizza.crust_type %>
+</p>
+<p>
+  <strong>Crispy:</strong>
+  <%=h @pizza.crispy %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_pizza_path(@pizza) %> |
+  <%= link_to "Destroy", @pizza, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", pizzas_path %>
+</p>

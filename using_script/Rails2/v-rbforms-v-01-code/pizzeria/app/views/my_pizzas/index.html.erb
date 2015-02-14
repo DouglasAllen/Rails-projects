@@ -1,0 +1,11 @@
+<% title "My Pizzas" %>
+
+<% if @pizzas.empty? %>
+  <p>You currently do not have any pizzas.</p>
+<% else %>
+  <div id="pizzas">
+    <%= render :partial => @pizzas %>
+  </div>
+<% end %>
+
+<p><%= link_to "Make a New Pizza", new_pizza_path %></p>
