@@ -1,0 +1,26 @@
+<h1> Welcome to <%= @world.name %>! </h1>
+
+<% if current_user %>
+  <p>
+    Hello, <%= current_user.email %>
+  </p>
+
+  <p> TODO: ask about game in progress </p>
+
+  <p>
+    Logged in as <%= current_user.email %>
+  </p>
+
+  <p>
+    Want to <%= link_to "log out?", destroy_user_session_path, :method => :DELETE %>
+  </p>
+<% else %>
+  <!-- Not logged in -->
+  <p>
+    You're not <%= link_to "logged in!", new_user_session_path %>
+  </p>
+
+  <p>
+    Are you <%= link_to "registered?", new_user_registration_path %>
+  </p>
+<% end %>

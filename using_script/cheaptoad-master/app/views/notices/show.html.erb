@@ -1,0 +1,26 @@
+<h1> Notice: <%= @notice.error_message %> </h1>
+<h3> Project (API_key): <%= @notice.api_key %> </h3>
+
+<p>
+  first instance of this error: <%= @notice.created_at %> <br />
+  most recent instance of this error: <%= @notice.updated_at %> <br />
+  number of occurrences: <b><%= @notice.count %></b>
+</p>
+
+<hr />
+
+<h2> Request </h2>
+
+<%= simple_format @notice.request.to_yaml %>
+
+<h2> Backtrace </h2>
+
+<%= simple_format @notice.backtrace.to_yaml %>
+
+<h2> Session Info </h2>
+
+<%= simple_format @notice.session.to_yaml %>
+
+<h2> Environment Variables </h2>
+
+<%= simple_format @notice.environment.to_yaml %>

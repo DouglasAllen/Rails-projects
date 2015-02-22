@@ -1,0 +1,9 @@
+Add "legal projects list" to make it annoying for attackers to send unlimited
+false notices
+
+Add CSS to views for easy stylesheetification, and way to supply a CSS file
+from app.  In general, add some kind of simple configuration block to allow
+easier customization than "write all your own views."
+
+Add ability to mark errors handled, so that they go into a different category
+until/unless they show up again.

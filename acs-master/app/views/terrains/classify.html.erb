@@ -1,0 +1,48 @@
+<h1>Terrain</h1>
+
+<div>
+<%= @terrain_set.terrains.count %> Terrains.
+</div>
+
+<%= form_for(@terrain_set, :url => { :action => :terrain_set }) do |f| %>
+  <%= f.submit %>
+
+  <div class="terrainsDiv">
+    <%= f.fields_for :terrains do |tf| %>
+      <p>
+        <%= tf.label :name %> <br/>
+        <%= tf.text_field :name %>
+      </p>
+      <p>
+        <%= tf.label :game_image_id %> <br/>
+        <%= tf.text_field :game_image_id, :class => :dropdown_result %>
+        <dl class="dropdown">
+          <dt><a href="#"><span>Select a terrain image
+              <% if tf.object.game_image %>
+                    <img class="flag" height="80"
+                         src="<%= tf.object.game_image.image_data.url %>" />
+              <% end %>
+              </span></a></dt>
+          <dd>
+            <ul>
+              <% @images.each do |image| %>
+                <li><a href="#">
+                    <img class="flag" height="80"
+                         src="<%= image.image_data.url %>" />
+                    <span class="value"><%= image.id %></span>
+                </a></li>
+              <% end %>
+            </ul>
+          </dd>
+        </dl>
+      </p>
+      <p>
+        <%= tf.label :passibility %> <br/>
+        <%= tf.text_field :passibility %>
+      </p>
+    <% end %>
+    <hr/>
+  </div>
+<% end %>
+
+<a class="newTerrainButton" href="">#</a>

@@ -1,0 +1,10 @@
+<%= hidden_field_tag "commit_button" %>
+<ul class="form-buttons">
+  <li><%= f.submit button_text, :onclick => "this.form.commit_button.value='#{button_text}'" %></li>
+  <%- if defined?(show_apply) and show_apply -%>
+    <li><%= f.submit 'Apply', :onclick => "this.form.commit_button.value='Apply'" %></li>
+  <%- end -%>
+  <%- unless cancel.nil? -%>
+    <li><%= cancel %></li>
+  <%- end -%>
+</ul>

@@ -1,0 +1,4 @@
+- Image preload w/ status bar
+- Simple bitmap editor (big task!)
+- Auto-refresh admin-view, or at a minimum the server status
+- Implement security -- implementors_only! and authors_only!

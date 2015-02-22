@@ -1,0 +1,4 @@
+Function to cut posts short after a certain length and add a "Read More" link.
+
+Javascript to prompt with "are you sure?" when using a tag that doesn't
+  already exist

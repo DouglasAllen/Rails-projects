@@ -1,0 +1,13 @@
+<% title "Edit: #{@snippet.title}" %>
+
+<div class="navbubble">
+
+  <h1>Editing Snippet</h1>
+
+  <p> &nbsp;&nbsp;&nbsp;
+    <%= link_to 'Show This Snippet', @snippet %> |
+    <%= link_to 'Show All Snippets', snippets_path %>
+  </p>
+</div>
+
+<%= render :partial => 'snippet_form', :locals => { :snippet => @snippet, :update_text => 'Update' } %>

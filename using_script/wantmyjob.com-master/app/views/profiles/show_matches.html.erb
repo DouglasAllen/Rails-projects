@@ -1,0 +1,33 @@
+<% big_center_text "Show Your Top Matches" %>
+
+<div class="spaced_container">
+
+  <% if @last_match_time %>
+    <%= render :partial => "matches/match_table" %>
+
+    <div>
+      Last recalculate: <%= distance_of_time_in_words(@last_match_time,
+                                                      Time.now) %> ago
+    </div>
+  <% elsif @perfect_answers.size < 3 %>
+    <div>
+      It doesn't look like you've answered enough of the questions
+      I'll need for matching.  Want to
+      <%= link_to("answer more?",
+                  :controller => :questions, :action => :answer) %>
+    </div>
+  <% else %>
+    <div>
+      I'm not finding any matches.  Hit the "recalculate" button below
+      to fix that.
+    </div>
+  <% end %>
+
+  <div class="button">
+    <%= link_to("Recalculate", {:controller => :profiles,
+                :action => :recalculate_matches}, :method => :post) %>
+  </div>
+
+  <%= link_to("(Actually, show me my matches with my own jobs, too!)",
+              :self_match => "1") %>
+</div>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="A blog about programming in Ruby and Rails.  This post: <%= @title ? @title : "general content" %>" />
+  <meta name="keywords" content="<%= @keywords ? @keywords.join(",") : ""%>" />
+  <title><%= @title ? "#{@title} - " : "" %>Angelbob on Programming</title>
+  <%= stylesheet_link_tag 'angelbob' %>
+  <%= stylesheet_link_tag 'harsh' %>
+  <%= stylesheet_link_tag 'harsh/twilight' %>
+  <%= stylesheet_link_tag 'harsh/eiffel' %>
+  <%= auto_discovery_link_tag :atom, posts_path(:atom) %>
+  <%= @post ? '<link rel="canonical" href="http://blog.angelbob.com/posts/' + "#{@post.to_param}" + '" />' : "" %>
+</head>
+<body>
+
+<div id="leftnavbar">
+  <a href="/about.html">
+  <img src="/images/myface.jpg" width="100" alt="my face" />
+    <br /> About Me</a>
+
+  <p>
+  <%= link_to 'Published Posts', posts_path({:tag => 'published'}) %>
+  </p>
+
+  <p>
+  <%= link_to 'All Posts', posts_path %>
+  </p>
+
+  <p>
+  <%= link_to 'New Post', new_post_path %>
+  </p>
+
+  <hr />
+
+  <p> View by Tag: <%= html_for_tag_list %> </p>
+
+  <hr />
+
+  <p>
+    <a href="http://static.angelbob.com/portfolio">Online Portfolio</a>
+  </p>
+
+  <p>
+    <a href="http://www.angelbob.com/resume">Resume</a> <br />
+  </p>
+
+  <p> <a href="http://www.linkedin.com/in/noahgibbs">Profile on LinkedIn</a> </p>
+
+  <p>
+  <a href="http://www.workingwithrails.com/recommendation/new/person/13240-noah-gibbs"><img alt="Recommend Me" src="http://workingwithrails.com/images/tools/compact-small-button.jpg" /></a>
+  </p>
+
+</div>
+
+<p id="flashNotice"><%= flash[:notice] %></p>
+
+<div class="content">
+
+<%= yield %>
+
+<!-- Disqus comments -->
+<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/angelbobsblog/embed.js"></script><noscript><a href="http://angelbobsblog.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+		}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/angelbobsblog/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+//]]>
+</script>
+
+</div>
+
+<!-- Google Analytics hook -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8592765-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-8592765-2";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+(HUGE) user karma
+
+=== Later? ===
+
+RSS feed for all languages
+RSS feed per-language
+RSS feed with keywords
+
+Email notification (same conditions as RSS feeds)
+
+(HUGE) Anonymous votes
+
+=== Small ===
+
+Add vote index by user-and-snippet, and by user-and-refactor
+
+Maybe move "Ruby/Written in Ruby" into floated-right div under other div
+
+Make vote buttons actual links, so we'll get the cursor changes on mouseover
+
+Disable show buttons on refactors
+
+Disable edit/destroy buttons for refactors depending on current user
+
+Disable edit/destroy buttons for snippets depending on current user

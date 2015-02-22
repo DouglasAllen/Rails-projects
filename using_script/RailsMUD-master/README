@@ -1,0 +1,5 @@
+        RailsMUD [Early devel version, no version number]
+
+  RailsMUD is an attempt to build a versatile two-way highly interactive game
+on top of a dynamic web site without several of the usual hacks like constant
+polling.  For more design discussion, see "http://railsmud.angelbob.com".

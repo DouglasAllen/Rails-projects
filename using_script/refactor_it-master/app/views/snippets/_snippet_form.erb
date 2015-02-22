@@ -1,0 +1,28 @@
+<div class="snippet_container">
+
+<% form_for(snippet) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :Code %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.select :language, SnippetsController::Languages.keys.sort,
+        :default => "Ruby" %>
+  </p>
+  <p>
+    <%= f.submit update_text %>
+  </p>
+<% end %>
+
+</div>

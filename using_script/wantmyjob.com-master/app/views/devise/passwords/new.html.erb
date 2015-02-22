@@ -1,0 +1,16 @@
+<div class="spaced_container">
+  <h2>Forgot your password?</h2>
+
+  <p> We can email you instructions to reset it. </p>
+
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <p><%= f.label :email %><br />
+    <%= f.text_field :email %></p>
+
+    <p><%= f.submit "Send me instructions, please" %></p>
+  <% end %>
+
+  <%= render :partial => "devise/shared/links" %>
+</div>

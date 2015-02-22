@@ -1,0 +1,7 @@
+<h1>Put Images into Image Sets</h1>
+
+<div>
+  <% @images.each do |image| %>
+    <img src="<%= image.image_data.url %>"> </img>
+  <% end %>
+</div>

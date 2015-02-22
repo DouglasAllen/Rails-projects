@@ -1,0 +1,93 @@
+<% title "My Profile" %>
+<% big_center_text "My Profile" %>
+
+<div class="spaced_container">
+  <ul>
+    <li><%= link_to("Change your email address or password?",
+                    edit_user_registration_path) %></li>
+  </ul>
+
+  <p>
+    For now, treat this information as public.  Eventually there
+    will be access controls.  For now, try to put the appropriate
+    information knowing that somebody could say, "hey, tell me about
+    that job you had."  That's the plan.
+  </p>
+
+  <h2> Your Resume </h2>
+
+  <%= form_for(profile, :action => :update_resume) do |f| %>
+    <%= f.label :resume %> (Your text or HTML resume, to be emailed)<br/>
+    <%= f.text_area :resume %> <br/>
+    <%= f.submit "Update Resume" %>
+  <% end %>
+
+  <h2> Your Jobs </h2>
+
+  <table>
+    <tr>
+      <th> Employer </th>
+      <th> Title </th>
+      <th> Start Date </th>
+      <th> End Date </th>
+      <th> </th>
+    </tr>
+
+    <% jobs.each do |job| %>
+      <tr>
+        <td><%= job.employer %></td>
+        <td><%= job.title %> </td>
+        <td><%= job.start_date %> </td>
+        <td><%= job.end_date %> </td>
+        <td><%= link_to("Edit", edit_job_path(job)) %> </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to("Add more jobs", :controller => :jobs, :action => :enter) %>
+
+  <h2> Personal Information for <%= profile.fullname || "you" %> </h2>
+
+  <p>
+    <b>Birth day:</b>
+    <%= profile.birth_day %>
+  </p>
+
+  <p>
+    <b>Birth month:</b>
+    <%= profile.birth_month %>
+  </p>
+
+  <p>
+    <b>Birth year:</b>
+    <%= profile.birth_year %>
+  </p>
+
+  <p>
+    <b>Gender:</b>
+    <%= profile.gender %>
+  </p>
+
+  <p>
+    <b>Time zone:</b>
+    <%= profile.time_zone %>
+  </p>
+
+  <p>
+    <b>Address:</b>
+    <%= profile.address %>
+  </p>
+
+  <p>
+    <b>Country:</b>
+    <%= profile.country %>
+  </p>
+
+  <p>
+    <b>State:</b>
+    <%= profile.state %>
+  </p>
+
+  <%= button_to("Edit Personal Info", {:action => :edit, :id => profile.id},
+                :method => :get) %>
+</div>

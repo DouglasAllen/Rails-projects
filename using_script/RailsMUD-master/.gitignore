@@ -1,0 +1,13 @@
+*~
+#*#
+log/*.log
+log/*.pid
+script/server.pid
+log/*.output
+db/*.db
+db/*.sqlite3
+tmp/**/*
+pkg/*
+config/database.yml
+crypto_keys.sh
+private_variables.sh

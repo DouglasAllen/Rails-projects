@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flavor: MyString
+  vendor: MyString
+  rating: 1
+
+two:
+  flavor: MyString
+  vendor: MyString
+  rating: 1

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title> [Refactor] <%= @title ? @title : "Social Refactoring!" %></title>
+  <%= stylesheet_link_tag 'refactor' %>
+  <%= stylesheet_link_tag 'harsh/twilight' %>
+  <%= stylesheet_link_tag 'harsh/dawn' %>
+  <%= stylesheet_link_tag 'harsh/eiffel' %>
+  <%= javascript_include_tag "curvycorners.js" %>
+  <%= javascript_include_tag "jquery-1.4.2.js" %>
+  <%= javascript_include_tag "application.js" %>
+</head>
+<body>
+  <div id="container" class="rounded1ex">
+    <% unless flash.empty? %>
+      <div id="flash_container">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, "&nbsp;" * 3 + msg, :id => "flash_#{name}" %>
+        <% end %>
+      </div>
+    <% end %>
+    <%= yield %>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<h1>Import Images</h1>
+
+<%= form_tag({}, { :multipart => true }) do %>
+  <div> Drag JPGs, PNGs or GIFs onto the 'Choose Files' button! </div> <br/>
+  <%= file_field_tag "image_data[]",
+    { :multiple => "multiple", :class => :files_input,
+      :accept => "image/jpg,image/png,image/gif" } %>
+  <br/>
+  <%= submit_tag %>
+<% end %>
+
+<div class="image_previews">
+</div>
+
+<div>
+  You can also <%= link_to "classify", :action => :classify %> images.
+</div>

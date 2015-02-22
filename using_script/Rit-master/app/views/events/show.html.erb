@@ -1,0 +1,11 @@
+<%- content_for :page_title, "Event - #{@event.name}" -%>
+<h1 class="check-icon"><%= @event.name %></h1>
+<h4><%= pretty_time(@event.start_time) %> - <%= pretty_time(@event.end_time) %></h4>
+<h5><%= @event.description %></h5>
+<%- if @event.live? -%>
+  <div class="live-notice">This Event is LIVE</div>
+<%- end -%>
+
+<%- @sorted_plate_editions.each do |plate_edition| -%>
+  <%= render :partial => 'plate_editions/events_plate_edition', :locals => { :plate_edition => plate_edition } %>
+<%- end -%>

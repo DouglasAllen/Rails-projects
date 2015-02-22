@@ -1,0 +1,15 @@
+<% big_center_text "Improve Your Recommendations" %>
+
+<div class="spaced_container">
+  <%= form_tag(:action => :answer_post) do %>
+    <%= hidden_field_tag "answer[answer_type]", @answer_type %>
+    <%= hidden_field_tag "answer[question_id]", @question.id %>
+    <%= hidden_field_tag "answer[profile_id]", current_user.profile.id %>
+    <%= @job ? (hidden_field_tag "answer[job_id]", @job.id) : "" %>
+    <%= render :partial => @template %>
+
+    <%= submit_tag "Answer", :class => :submit_button %>
+    or <%= submit_tag "Skip this Question", :class => :submit_button %>
+  <% end %>
+
+</div>

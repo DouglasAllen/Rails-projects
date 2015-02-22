@@ -1,0 +1,2 @@
+* Fix ruby-shadow library not to run when "vagrant provision" is re-run
+

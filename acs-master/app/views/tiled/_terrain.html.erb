@@ -1,0 +1,36 @@
+<%
+  # Params
+  set_name ||= "global"
+  terrain_mapping ||= {}
+  tile_width ||= 64
+  tile_height ||= 64
+  if terrain_mapping.empty?
+    images = GameImage.all
+    images.each_with_index do |image, index|
+      terrain_mapping[index.to_s] = image
+    end
+  end
+%>
+
+<%= javascript_tag do %>
+  (function() {
+    if(typeof(Terrains) === "undefined") {
+      Terrains = {};
+    }
+    var terrain_name = "<%= set_name %>";
+
+    if(!Terrains[terrain_name]) {
+      Terrains[terrain_name] = {};
+    }
+
+    // TODO: track loaded percent and show status
+    var set = Terrains[terrain_name];
+    set["width"] = <%= tile_width %>;
+    set["height"] = <%= tile_height %>;
+    <% terrain_mapping.each do |name, image| %>
+      newImage = new Image();
+      newImage.src = "<%= image.image_data.url %>";
+      set["<%= name %>"] = newImage;
+    <% end %>
+  })();
+<% end %>

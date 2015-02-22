@@ -1,0 +1,67 @@
+Internal Rolling Release, Infrastructure:
+  - Cucumber test for job entry
+  - Cucumber test for answering questions
+  - Cucumber test for calculating matches and seeing them
+  - Turn on paper_trail
+  - Move various match actions into matches controller
+  - Specs for UtterlyNaiveMatch calculations
+  - Install Vanity for A/B testing
+  - Use delayed_job for updating matches
+  - Google Analytics async snippet
+
+Release User Retention:
+  - MailChimp, with at least one reminder email in some capacity
+    - pseudo-transactional emails
+    - Double opt-in sign-up
+
+Release Get People Hired:
+  - Submit resume through WMJ
+  - Manually add jobs email addresses to site
+    - Manually set up company entries on site
+
+Release PageRank:
+  - Acts-as-taggable-on tags
+  - Will_paginate appearance customization
+
+Release Improve Conversion:
+  - Guest login that remembers answers, and asks perfect company questions
+  - Ability to convert guest login to named login w/ email
+
+Release User Engagement:
+  - Goals in database for things like "fully answer five questions"
+    or "submit a question to the site"
+  - Show current goal progress when improving recommendations
+  - Very basic karma tracking
+
+Release Modestly Viral:
+  - Demo profiles
+  - Enter a bunch of demo profiles for Joe Corporate, Bob Agile, etc
+  - Allow you to evaluate your company on those criteria
+  - Add HTML snippets to use as memes
+
+Important, but probably not release 1:
+  - Figure skipped questions into Wilson score somehow
+  - Add test verifying that only questions marked verified are asked
+
+Usability:
+
+  - When entering jobs, set start_date on following row to end_date just
+    entered, unless that date has been changed manually at some point
+  - Redesign profile page
+
+Robustness:
+
+  - More testing of blank employer names
+  - More description of *which* employer -- for instance, when you worked
+    there -- when asking questions and showing job lists
+
+Formatting and Prettiness:
+
+  - Custom 404 page
+  - Trim invalid links from various devise and registration views
+  - Update flash containers to new color scheme
+
+Promotion:
+
+  - Sitemap.xml
+  - Review titles, h1 tags, meta tags, etc for SEO keywords

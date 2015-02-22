@@ -1,0 +1,6 @@
+.bundle/
+db/*.sqlite3
+coverage/
+coverage.data
+log/*
+tmp/*

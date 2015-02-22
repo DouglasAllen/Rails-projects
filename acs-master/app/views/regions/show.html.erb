@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @region.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @region.description %>
+</p>
+
+<p>
+  <b>Region Type:</b>
+  <%= @data["type"] || "(None)" %>
+</p>
+
+<p>
+  <%= link_to 'Start Type-Specific Region Editor', :action => :edit_data %>
+</p>
+
+<p><b> Rooms: </b></p>
+<ul>
+  <% @region.rooms.each do |room| %>
+    <li> <%= link_to(room.name, room) %> </li>
+  <% end %>
+</ul>
+
+<p>
+  <b>World:</b>
+  <%= @region.world ? @region.world.name : "None" %>
+</p>
+
+<p>
+  <b>JSON data:</b>
+  <%= @region.json_data %>
+</p>
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %>

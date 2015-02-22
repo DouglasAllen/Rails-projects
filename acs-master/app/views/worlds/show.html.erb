@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @world.description %>
+</p>
+
+<p>
+  <b>Author name:</b>
+  <%= @world.author_name %>
+</p>
+
+<p>
+  <b>Author email:</b>
+  <%= @world.author_email %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @world.name %>
+</p>
+
+<p>
+  <b>Is Default:</b>
+  <%= @world.is_default %>
+</p>
+
+<p>
+  <b>Start Region:</b>
+  <%= @start_region_name %>
+</p>
+
+<p>
+  <b>Start Room:</b>
+  <%= @start_room_name %>
+</p>
+
+<p><b> Regions: </b></p>
+<ul>
+  <% @world.regions.each do |region| %>
+    <li> <%= link_to(region.name, region) %> </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Region', new_region_path %>
+
+<hr/>
+
+<%= link_to 'Edit', edit_world_path(@world) %> |
+<%= link_to 'Back', worlds_path %>

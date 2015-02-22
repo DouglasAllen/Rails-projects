@@ -1,0 +1,68 @@
+<% big_center_text @company.company_name %>
+
+<% if @company.url && !@company.url.empty? %>
+  <p>
+    <%= link_to("#{@company.company_name}'s Site", @company.url) %>
+  </p>
+<% end %>
+
+<% if @company.apply_email && !@company.apply_email.empty? %>
+  <p>
+    Apply for a job at &quot;<%= @company.apply_email %>&quot;
+  </p>
+<% end %>
+
+<% if !current_user %>
+  <p>
+    How well do you match the
+    <%= @company.jobs.size > 1 ? "#{@company.jobs.size} jobs" : "job" %>
+    we rate at <%= @company.company_name %>?
+    <%= link_to('Log in', new_user_session_path) %> or
+    <%= link_to('create an account', new_user_registration_path) %>
+    to find out!
+  </p>
+<% elsif @matches && !@matches.empty? %>
+  <p>
+    Your matches with this company:
+  </p>
+
+  <%= render :partial => "matches/match_table" %>
+<% end %>
+
+<% if current_user && current_user.admin? %>
+
+  <hr />
+
+  <p>
+    <b>Search Code:</b>
+    <%= @company.search_code %>
+  </p>
+
+  <p>
+    Jobs at this company:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Title</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @company.jobs.each do |job| %>
+        <tr>
+          <td> <%= job.profile.human_name %> </td>
+          <td> <%= job.title %> </td>
+          <td> <%= job.start_date %> </td>
+          <td> <%= job.end_date %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'Edit', edit_company_path(@company) %> |
+  <%= link_to 'Back', companies_path %>
+<% end %>

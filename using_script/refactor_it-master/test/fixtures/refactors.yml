@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  comment: MyText
+  snippet: one
+  language: MyString
+  user: bobo
+  user_note: MyString
+
+two:
+  body: MyText
+  comment: MyText
+  snippet: two
+  language: MyString
+  user: sammy
+  user_note: MyString
+
+phprefactor:
+  body: print "Ruby sux!"
+  comment: It does!
+  snippet: phpsux
+  language: Ruby
+  user: sammy
+  user_note:

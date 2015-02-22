@@ -1,0 +1,4 @@
+<% big_center_text post.title %>
+<% title post.title %>
+
+<%= render :partial => "post", :object => post, :locals => { :commentlink => true, :notitle => true } %>

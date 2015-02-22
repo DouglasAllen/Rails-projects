@@ -1,0 +1,16 @@
+<% title "Edit Refactor" %>
+
+<div class="navbubble">
+
+  <h1>Editing Refactor</h1>
+
+  <p> &nbsp;&nbsp;&nbsp;
+    <%= link_to 'Show This Refactor',
+                snippet_refactor_path(@refactor.snippet, @refactor) %> |
+    <%= link_to 'Show This Snippet', @refactor.snippet %>
+    <%= link_to 'Show This Refactor\'s Snippet', @refactor.snippet %>
+    <%= link_to 'Show All Snippets', snippets_path %>
+  </p>
+</div>
+
+<%= render :partial => 'refactor_form', :locals => { :refactor => @refactor, :update_text => 'Update' } %>

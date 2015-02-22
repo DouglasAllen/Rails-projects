@@ -1,0 +1,16 @@
+<p>
+  (Insert view here)
+</p>
+
+<canvas class="TiledCanvas" height="400" width="800">
+  <p> If your browser doesn't support Canvas, this isn't going to work. </p>
+  <p> Have you accepted ChromeFrame as your personal saviour?
+    I have a brochure here somewhere. </p>
+</canvas>
+
+<%= javascript_tag do %>
+  var tiles = [ ["1", "2", "3", "4"], ["2", "3", "4", "5"], ["3", "4", "5", "6"], ["4", "5", "6", "7"] ]
+  window.tiled_display = new window.TiledDisplay($(".TiledCanvas")[0], tiles, "global");
+
+  setInterval(function() { window.tiled_display.draw(); }, 1000);
+<% end %>

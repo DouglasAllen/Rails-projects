@@ -1,0 +1,9 @@
+<h1> Edit Data </h1>
+
+<%
+  tw = @data["tile_width"] || 64
+  th = @data["tile_height"] || 64
+%>
+
+<%= render :partial => "tiled/terrain", :locals => { :tile_width => tw, :tile_height => th } %>
+<%= render :partial => "tiled/canvas" %>

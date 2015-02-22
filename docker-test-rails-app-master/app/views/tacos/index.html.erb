@@ -1,0 +1,31 @@
+<h1>Listing tacos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flavor</th>
+      <th>Vendor</th>
+      <th>Rating</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tacos.each do |taco| %>
+      <tr>
+        <td><%= taco.flavor %></td>
+        <td><%= taco.vendor %></td>
+        <td><%= taco.rating %></td>
+        <td><%= link_to 'Show', taco %></td>
+        <td><%= link_to 'Edit', edit_taco_path(taco) %></td>
+        <td><%= link_to 'Destroy', taco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taco', new_taco_path %>

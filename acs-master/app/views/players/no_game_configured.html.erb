@@ -1,0 +1,13 @@
+<p>
+  This server's administrator hasn't configured a game for you to play.
+</p>
+
+<p>
+  If you are writing the game, you can <%= link_to("log in", new_user_session_path) %>
+  or <%= link_to("register", new_user_registration_path) %> instead.
+</p>
+
+<p>
+  If you're already signed in and a game creator,
+  <%= link_to("you could look at the list of worlds", worlds_path) %>.
+</p>

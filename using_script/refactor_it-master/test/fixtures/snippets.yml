@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  body: MyText
+  language: MyString
+  user_id: 4
+
+two:
+  title: MyString
+  body: MyText
+  language: MyString
+  user_id: 4
+
+phpsux:
+  title: How do I write this?
+  body: print "PHP sux!"
+  language: Ruby
+  user: bobo

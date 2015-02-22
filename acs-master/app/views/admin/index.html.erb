@@ -1,0 +1,38 @@
+<h1>Administer Your Game</h1>
+
+<p>
+  Current active world: <%= @world ? @world.name : "None" %> <br/>
+  Last update:
+    <% if @active_world_last_update %>
+      <% if (Time.now - @active_world_last_update) > 120.seconds %>
+        <%= time_ago_in_words(@active_world_last_update) %>
+      <% else %>
+        <%= (Time.now - @active_world_last_update).to_i %> seconds
+      <% end %>
+    <% else %> None <% end %> <br/>
+  Redis: <%= @redis_connected ? "Connected" : "Not Connected" %> <br/>
+  <%= link_to("Start server!", { :action => :start_server }, :method => :post) %>
+</p>
+
+<p>
+  <%= link_to("List of worlds", worlds_path) %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>World</th>
+      <th>Server Status</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @statuses.each do |s| %>
+      <tr>
+        <td> <%= s.world.name %> </td>
+        <td> <%= s.server_host || "None" %> </td>
+        <td> <%= time_ago_in_words s.updated_at %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

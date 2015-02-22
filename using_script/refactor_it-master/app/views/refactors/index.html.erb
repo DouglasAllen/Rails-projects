@@ -1,0 +1,13 @@
+<% title "All Refactors of #{@snippet.title}" %>
+
+<div class="navbubble">
+
+<h1>Listing refactors</h1>
+
+<p>
+  &nbsp; &nbsp; &nbsp; <%= link_to 'New refactor', new_snippet_refactor_path(@snippet) %>
+</p>
+
+</div>
+
+<%= render :partial => @refactors %>

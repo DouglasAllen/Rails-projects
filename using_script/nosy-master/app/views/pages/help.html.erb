@@ -1,0 +1,139 @@
+<article class="help">
+  <h1>Help</h1>
+
+  <p>Here are some brief instructions for getting going.</p>
+
+  <section>
+    <h2>Before you start</h2>
+
+    <h3>Setting up a user</h3>
+
+    <p>There's no web-based way to do this right now. Instead, you'll need to create one directly in the database.</p>
+
+    <p>You'll need to know your Campfire API key to do this. You can find it at <a href="https://gofreerange.campfirenow.com/member/edit">the My info page</a> on the Campfire site.</p>
+
+    <p>For example, while logged in to <tt>nosy.gofreerange.com</tt> as the <tt>nosy</tt> user:</p>
+    <p><pre><code>$ bundle exec rails console
+irb> Person.create(name: "James Adam", campfire_subdomain: "gofreerange", campfire_token: "abc123def456", campfire_room: "Free Range")
+=> #&lt;Person id: 1, name: "James Adam", token: "abcd1234", campfire_account: "lazyatom", campfire_token: "abc123def456", campfire_room: "Stuff", created_at: "2013-01-09 19:23:21", updated_at: "2013-01-09 19:23:21"&gt;
+</pre></code></p>
+
+    You'll need to take a note of the generated token.
+
+    <h3>Configuration</h3>
+
+    I had hoped to be able to support configuration via environment variables, but since I want to be able to run this command from various GUI tools, the simplest way forward is with a <tt>~/.freerange.yml</tt> file:
+
+    <p><pre><code>---
+GFR_STATUS_URI: http://anything:abcd1234@nosy.gofreerange.com</code></pre></p>
+
+  </section>
+
+  <section>
+    <h2>Usage</h2>
+
+    <p>There's no way to post directly via the web right now, but that's because I don't expect people to want to visit a website in the middle of their work.</p>
+
+    <ul>
+      <li><a href="#quicksilver">From Quicksilver</a></li>
+      <li><a href="#alfred">From Alfred</a></li>
+      <li><a href="#terminal">From a terminal</a></li>
+    </ul>
+
+
+    <h3 id="quicksilver">Quicksilver</h3>
+
+    <p>Posting from Quicksilver can be very fast and fluid, with minimal interuption to your actualwork.</p>
+
+    <p>First, and importantly, create your user and <tt>~/.freerange.yml</tt> file as described above.</p>
+
+    <p>Download <a href="/downloads/status.sh">this script</a> and save it into <tt>~/Library/Application Support/Quicksilver/Actions</tt>. We also need to mark it as executable:</p>
+
+    <p><pre><code>$ chmod +x ~/Library/Application Support/Quicksilver/Actions/status.sh</code></pre></p>
+
+    <p>Next, we need to tell Quicksilver about it. In the Quicksilver preferences, choose 'Catalog', and then select 'Custom' from the sidebar. It should look something like this:</p>
+
+    <%= image_tag "quicksilver/catalog.png" %>
+
+    <p>We want to add a new folder - the <tt>Actions</tt> folder - to the catalog. Click the <tt>+</tt> in the bar at the bottom, choose 'File & Folder Scanner', and then choose the <tt>Actions</tt> folder (you may need to use <tt>cmd-shift-G</tt> to navigate to <tt>~/Library/Application Support/Quicksilver/</tt>):
+
+    <%= image_tag "quicksilver/add-actions.png" %>
+
+    <p>Click 'Open', then back in Quicksilver click the 'i' button at the bottom right to configure this folder. We want to:</p>
+
+    <ul>
+      <li>Include contents: Folder contents</li>
+      <li>Search 1 level deep</li>
+      <li>Omit source item</li>
+    </ul>
+
+    <p>It should look something like this:</p>
+
+    <%= image_tag "quicksilver/configure-catalog.png" %>
+
+    Check the 'Contents' tab, and maybe hit the 'reload' arrow in the bottom right of the main Catalog window if the <tt>status.sh</tt> script hasn't appeared.</p>
+
+    <%= image_tag "quicksilver/check-catalog.png" %>
+
+    <p>You should now be ready to go. Activate Quicksilver, and hit the <tt>'</tt> to start text entry mode. Type your status:</p>
+
+    <%= image_tag "quicksilver/typing.png" %>
+
+    <p>Then hit <tt>tab</tt>, and start typing 'status'</p>
+
+    <%= image_tag "quicksilver/select-status.png" %>
+
+    <p>Once it's selected, hit enter and your status should be posted. You won't see any visual feedback, but checking on the site or in Campfire should verify that everything is OK.</p>
+
+    <p>Be sure to read <a href="#no-status-in-campfire">this FAQ about why you might not see your statuses in Campfire</a></p>
+
+    <h3 id="alfred">Alfred</h3>
+
+    <p>Posting from Alfred is as easy as Quicksilver, and the setup is even easier. <strong>NOTE:</strong> you'll need to have purchased the 'Power Pack' in order to use this extension.</p>
+
+    <p>First, and importantly, create your user and <tt>~/.freerange.yml</tt> file as described above.</p>
+
+    <p>Next, download either the extension or the workflow, depending on whether you are using Alfred 1 or Alfred 2:</p>
+
+    <p><a href="/downloads/GFR Status.alfredextension" class="btn btn-large btn-primary">Download Extension for Alfred 1</a><a href="/downloads/GFR Status.alfredworkflow" class="btn btn-large btn-primary">Download Workflow for Alfred 2</a></p>
+
+    <p>Once it's downloaded, double-click it to open it in Alfred. Choose 'Import' to actually install it (or replace any older version). That's about it as far as the setup goes.</p>
+
+    <p>To use it, start typing <tt>status</tt> (often <tt>st</tt> is enough), and hit <tt>tab</tt> to auto-complete the command:</p>
+
+    <%= image_tag "alfred/type-st.png" %>
+
+    <p>Then, after the word <tt>status</tt> just start typing whatever you're working on:</p>
+
+    <%= image_tag "alfred/write-status.png" %>
+
+    <p>Hit enter and your status will be updated and sent to Campfire. Easy!</p>
+
+    <p>Be sure to read <a href="#no-status-in-campfire">this FAQ about why you might not see your statuses in Campfire</a></p>
+
+    <h3 id="terminal">Terminal</h3>
+
+    <p>First, and importantly, create your user and <tt>~/.freerange.yml</tt> file as described above.</p>
+
+    <p>Download <a href="/downloads/status.sh">this script</a> and save it somewhere that's in your <tt>$PATH</tt>.</p>
+
+    <p>You can then post updates by providing your status as a quoted argument to the shell script, e.g.:</p>
+
+    <p><pre><code>$ status.sh "doing something with the widgets"</code></pre></p>
+
+    <p>You might want to create an alias in your shell, so that you can quickly type the command. Maybe something like:</p>
+
+    <p><pre><code>$ alias st=status.sh
+$ st "doing something with the widgets"</code></pre></p>
+
+    <p>Be sure to read <a href="#no-status-in-campfire">this FAQ about why you might not see your statuses in Campfire</a></p>
+  </section>
+
+  <section>
+    <h2>FAQ</h2>
+
+    <h3 id="no-status-in-campfire">Why don't I see my statuses appear in Campfire?</h2>
+
+    <p>You might not see postings from nosy appear in your Campfire client, because of the way Campfire polling works. Reloading the connection or viewing the Transcripts will verify that the message really was posted, and everyone else will have seen it immediately.</p>
+  </section>
+</article>

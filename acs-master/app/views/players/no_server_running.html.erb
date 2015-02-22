@@ -1,0 +1,18 @@
+<h1> No Server is Running! </h1>
+
+<p>
+  Right now, there's no server running, so the game isn't running.
+</p>
+
+<p>
+  <% if @status == nil %>
+    In fact, it kind of looks like you've never run a server before.
+  <% else %>
+    The server was last running <%= time_ago_in_words(@status.updated_at) %> ago.
+  <% end %>
+</p>
+
+<p>
+  If you're a game administrator, <%= link_to("the admin page", :controller => :admin) %>
+  can help you start the server.
+</p>

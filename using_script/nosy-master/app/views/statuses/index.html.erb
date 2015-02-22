@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="span6">
+    <ul class="latest statuses">
+      <% @latest_statuses.each do |status| %>
+        <%= content_tag_for :li, status do %>
+          <p>
+            <span class="avatar"><%= gravatar(status.person, 60) %></span>
+            <span class="person"><%= status.person.name %></span>
+            <span class="created-at"><%= distance_of_time_in_words_to_now_tag(status.created_at) %> ago</span>
+            <span class="text"><%= status.text %></span>
+          <p>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="span5 offset1">
+    <ul class="statuses">
+      <% @older_statuses.each do |status| %>
+        <%= content_tag_for :li, status do %>
+          <p>
+            <span class="avatar"><%= gravatar(status.person, 20, title: status.person.name) %></span>
+            <span class="text"><%= status.text %></span>
+            <span class="created-at"><%= distance_of_time_in_words_to_now_tag(status.created_at) %> ago</span>
+          </p>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
